@@ -24,3 +24,12 @@ class ProductManager:
     def calculate_total_value(self):
         total = sum(product.price * product.quantity for product in self.products)
         return total
+
+    # Metoda koja uklanja proizvod prema imenu
+    def remove_product_by_name(self, name):
+        for product in self.products:
+            if product.name.lower() == name.lower():
+                self.products.remove(product)
+                print(f"Uklonjen proizvod: {name}")
+                return
+        print(f"Proizvod sa imenom '{name}' nije pronađen.")
