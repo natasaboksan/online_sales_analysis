@@ -33,3 +33,13 @@ class ProductManager:
                 print(f"Uklonjen proizvod: {name}")
                 return
         print(f"Proizvod sa imenom '{name}' nije pronađen.")
+        
+    def get_all_products(self):
+        return self.products
+    
+    def get_random_products(self, count):
+        import random
+        if count > len(self.products):
+            return self.products
+        return random.sample(self.products, count)
+
