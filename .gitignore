@@ -2,3 +2,5 @@
 screenshots
 # ignorisi .png fajl
 .png
+#ignorisati datoteku config.json
+config.json
